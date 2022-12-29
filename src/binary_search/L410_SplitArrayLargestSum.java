@@ -1,7 +1,7 @@
 package binary_search;
 
 // leetcode 410  link: https://leetcode.cn/problems/split-array-largest-sum/description/
-public class SplitArrayLargestSum {
+public class L410_SplitArrayLargestSum {
     public static void main(String[] args) {
         int[] nums = {7,2,5,10,8};
         int result = splitArray(nums, 2);

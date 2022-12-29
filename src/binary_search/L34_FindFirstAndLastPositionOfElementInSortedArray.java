@@ -1,8 +1,9 @@
 package binary_search;
+// leetcode 32 link: https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
 
 import java.util.Arrays;
 
-public class FindFirstAndLastPositionOfElementInSortedArray {
+public class L34_FindFirstAndLastPositionOfElementInSortedArray {
     public static void main(String[] args) {
         int[] nums = {5,7,7,8,8,10};
         System.out.println(Arrays.toString(searchRange(nums, 8)));

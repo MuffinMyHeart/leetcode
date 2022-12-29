@@ -1,7 +1,7 @@
 package binary_search;
 
 // leetcode 33 link: https://leetcode.cn/problems/search-in-rotated-sorted-array/
-public class SearchInRotatedSortedArray {
+public class L33_SearchInRotatedSortedArray {
 
     public static void main(String[] args) {
         int[] nums = {3, 1};

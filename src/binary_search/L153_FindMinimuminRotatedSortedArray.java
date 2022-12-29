@@ -1,7 +1,7 @@
 package binary_search;
 
 // leetcode 153 link: https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array/
-public class FindMinimuminRotatedSortedArray {
+public class L153_FindMinimuminRotatedSortedArray {
     public static void main(String[] args) {
         int[] nums = {13,15,17,11};
         System.out.println(findMin(nums));

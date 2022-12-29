@@ -1,7 +1,7 @@
 package tow_point;
-// leetcode 42
+// leetcode 42 link: https://leetcode.cn/problems/trapping-rain-water/
 //Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.
-public class TrappingRainWater {
+public class L42_TrappingRainWater {
 
     public static void main(String[] args) {
         int[] height = {4,2,0,3,2,5};

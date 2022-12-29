@@ -2,10 +2,10 @@ package tow_point;
 
 import java.util.Arrays;
 
-// leetcode 283
+// leetcode 283 link: https://leetcode.cn/problems/move-zeroes/
 //Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
 //        Note that you must do this in-place without making a copy of the array.
-public class MoveZeroes {
+public class L283_MoveZeroes {
 
     public static void main(String[] args) {
         int[] nums = {0,1,0,3,12};

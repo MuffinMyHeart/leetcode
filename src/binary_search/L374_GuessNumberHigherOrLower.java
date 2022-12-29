@@ -1,7 +1,7 @@
 package binary_search;
 
 // leetcode 374 link: https://leetcode.cn/problems/guess-number-higher-or-lower/
-public class GuessNumberHigherOrLower {
+public class L374_GuessNumberHigherOrLower {
 
     static int pick = 6;
 

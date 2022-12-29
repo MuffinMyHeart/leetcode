@@ -1,7 +1,7 @@
 package binary_search;
 
 // leetcode 35: link: https://leetcode.cn/problems/search-insert-position/
-public class SearchInsertPosition {
+public class L35_SearchInsertPosition {
     public static void main(String[] args) {
         int[] nums = {1,3,5,6};
         System.out.println(searchInsert(nums, 7));

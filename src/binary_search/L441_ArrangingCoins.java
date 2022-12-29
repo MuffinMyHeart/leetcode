@@ -1,7 +1,7 @@
 package binary_search;
 
 // leetcode 441: link: https://leetcode.cn/problems/arranging-coins/
-public class ArrangingCoins {
+public class L441_ArrangingCoins {
     public static void main(String[] args) {
         System.out.println(arrangeCoins(5));
     }
