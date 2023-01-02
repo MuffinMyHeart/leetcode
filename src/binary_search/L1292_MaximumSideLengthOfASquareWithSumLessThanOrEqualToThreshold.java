@@ -15,9 +15,17 @@ public class L1292_MaximumSideLengthOfASquareWithSumLessThanOrEqualToThreshold {
     private static int sarriaAnswer(int[][] mat, int threshold) {
         int l = 0;
         int r = Math.min(mat.length, mat[0].length);
+        int[][] p = new int[mat.length + 1][mat[0].length + 1];
+        for (int i = 1; i < p.length; i++) {
+            int sum = 0;
+            for (int j = 1; j < p[0].length; j++) {
+                sum += mat[i - 1][j - 1];
+                p[i][j] = p[i - 1][j] + sum;
+            }
+        }
         while (l < r) {
             int mid = l + (r - l + 1) / 2;
-            if (check(mat, mid, threshold)) {
+            if (check(p, mid, threshold)) {
                 l = mid;
             } else {
                 r = mid - 1;
@@ -26,25 +34,16 @@ public class L1292_MaximumSideLengthOfASquareWithSumLessThanOrEqualToThreshold {
         return l;
     }
 
-    private static boolean check(int[][] mat, int target, int threshold) {
+    private static boolean check(int[][] p, int target, int threshold) {
         if (target == 0) return false;
-        for (int i = 0; i <= mat.length - target; i++) {
-            for (int j = 0; j <= mat[0].length - target; j++) {
-                if (checkSum(mat, target, i, j, threshold)) {
+        for (int i = 1; i <= p.length - target; i++) {
+            for (int j = 1; j <= p[0].length - target; j++) {
+                int sum = p[i + target - 1][j + target - 1] - p[i + target - 1][j - 1] - p[i - 1][j + target - 1] + p[i - 1][j - 1];
+                if (sum <= threshold) {
                     return true;
                 }
             }
         }
         return false;
-    }
-
-    private static boolean checkSum(int[][] mat, int target, int iStart, int jStart, int threshold) {
-        int sum = 0;
-        for (int i = iStart; i < iStart + target; i++) {
-            for (int j = jStart; j < jStart + target; j++) {
-                sum += mat[i][j];
-            }
-        }
-        return sum <= threshold;
     }
 }
